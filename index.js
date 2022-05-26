@@ -346,5 +346,5 @@ app.get('/', (req, res) => {
     res.send("Hello from /");
 })
 app.listen(port, () => {
-    console.log(`Server listening on the port = ${port}`);
+    console.log(`Server listening on the port  ${port}`);
 })
