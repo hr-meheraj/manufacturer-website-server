@@ -7,7 +7,7 @@ const { MongoClient, ObjectId, ServerApiVersion } = require('mongodb');
 const jwt = require('jsonwebtoken');
 const uri = "mongodb+srv://hrmeheraj:hrmeheraj2007@cluster0.cv5my.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
-const stripe = require('stripe')('sk_test_51L3D18LiBwdXb9tUrgpC6zdN1M7m9D2tlBUzfh36Yt9xNq6k2P5b2qluvB4J71i1VZT1DmJy4NEBC51QpcqA5RjF002Lf0pb5l');
+const stripe = require('stripe')(process.env.Seceret_Key);
 const corsOptions = {
   origin: 'https://tools-manufacture.web.app',
   optionsSuccessStatus: 200 
@@ -15,7 +15,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 
-const secret = 'fb5d5a19492fa47606857ae2654f5ca54395fd9f035e75150b93aebc27198c4346f7a4eed03683ecf344f7981c53c5f9643c6e1ec95e23ef89ddfdfe15b0a1bb';
+const secret = process.env.Secret_Token;
 
 // Important Middleware
 const verifyJWT = (req,res,next) => {
