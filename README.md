@@ -1,1 +1,1 @@
-# manufacturer-website-server-side-hr-meheraj-22
+# Full Stack Manufacturer Assignment - MERN 
